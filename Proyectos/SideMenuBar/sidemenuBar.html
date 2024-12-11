@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Side Bar</title>
+    <link rel="stylesheet" href="../SideMenuBar/sidemenuBar.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      /* Estilos básicos para el menú desplegable */
+      .dropdown-menu {
+        display: none; /* Ocultar el menú por defecto */
+        position: absolute; /* Posicionar el menú de forma absoluta */
+        background-color: rgb(77, 8, 8); /* Fondo blanco */
+        border: 1px solid #411717; /* Borde gris */
+        z-index: 1; /* Asegurar que el menú esté encima */
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Mostrar el menú al pasar el ratón */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="" class="logo">
+            <img src="../SideMenuBar/i.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="../index.html" target="_parent">
+            <i data-feather="home" class="icon"></i>
+            <span class="nav-item">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i data-feather="user" class="icon"></i>
+            <span class="nav-item">Perfil</span>
+          </a>
+        </li>
+        <li class="dropdown">
+          <a href="#">
+            <i data-feather="book" class="icon"></i>
+            <span class="nav-item">Categorías</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="../SideMenuBar/Categorias/gore/gore.html" target="_parent">Gore</a></li>
+            <li><a href="../SideMenuBar/Categorias/cyber/Cyber.html" target="_parent">Cyberpunk</a></li>
+            <li><a href="../SideMenuBar/Categorias/Seinen/Seinen.html" target="_parent">Seinen</a></li>
+            <li><a href="../SideMenuBar/Categorias/terror/terror.html" target="_parent">Terror</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="#">
+            <i data-feather="mail" class="icon"></i>
+            <span class="nav-item">Contactos</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout">
+            <i data-feather="log-out" class="icon"></i>
+            <span class="nav-item"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
